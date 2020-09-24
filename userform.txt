@@ -1,0 +1,52 @@
+Private Sub CheckBox1_Click()
+
+End Sub
+
+Private Sub CheckBox8_Click()
+
+End Sub
+
+Private Sub CommandButton1_Select_all_Click()
+  Dim i As Long
+  For i = 1 To 10 '要素の数に変更する
+    Me.Controls("CheckBox" & i).Value = True
+    CheckBox1.Value = True
+  Next i
+End Sub
+
+Private Sub CommandButton2_Exec_Click()
+    Dim checkedElement As String
+    Dim checkedElementsArray As Variant
+    Dim message As String
+    Dim flag As Boolean, i As Integer
+        flag = False
+        checkedElement = Me.Controls("CheckBox" & 1).Caption
+        checkedElementsArray = Array(checkedElement)
+        For i = 2 To 10
+            If Me.Controls("CheckBox" & i).Value = True Then
+                'チェックした要素を格納
+                checkedElement = Me.Controls("CheckBox" & i).Caption
+                '配列myMSGにMe.Controls("CheckBox" & i).Captionを追加する
+                checkedElementsArray = addElementOneDimensionArray(checkedElementsArray, checkedElement)
+                flag = True
+            End If
+        Next i
+        If flag = True Then
+            'Debug.Print (checkedElementsArray(0))
+            createGraph (checkedElementsArray)
+        Else
+            message = "いずれにもチェックが入っていません"
+        End If
+        MsgBox message
+        For i = 1 To 10
+            Me.Controls("CheckBox" & i).Value = False
+        Next i
+End Sub
+
+Private Sub CommandButton3_Cancel_Click()
+  Unload Me
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub

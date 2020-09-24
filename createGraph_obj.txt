@@ -1,0 +1,73 @@
+Function createGraph(checkedElementsArray)
+'
+' Macro2 Macro
+'
+  Dim i: i = 1
+  Dim j: j = 1
+  Dim k: k = 2
+  Dim l: l = 2
+  Dim m: m = 1
+  Dim timesColumn: timesColumn = 1
+  Dim disksColumn: disksColumn = 12
+  Dim firstDiskname
+  Dim lastDiskname
+  Dim graphElements As Variant
+  Dim itm As Variant
+  Dim createHorizonAxis_Flag As Boolean: createHorizonAxis_Flag = 0
+  
+  elements = WorksheetFunction.CountA(Range("1:1")) '列数
+  
+  'Debug.Print (checkedElementsArray(0))
+  
+  'A列の時間重複削除
+  Range("A:A").RemoveDuplicates Array(1)
+
+  'if文実行のflagとして、最初のディスク名を格納
+  firstDiskname = Cells(1, disksColumn).Value
+  
+  'シート追加
+  addSheetsForArray (checkedElementsArray)
+  
+  Do Until Worksheets("Input").Cells(i, disksColumn).Value = ""
+    i = i + 1
+    If Worksheets("Input").Cells(i, disksColumn).Value = firstDiskname Or Worksheets("Input").Cells(i, disksColumn).Value = "" Then
+     
+      '各グラフの軸作成
+      If createHorizonAxis_Flag = 0 Then
+        'グラフの横軸(ディスクのインスタンス名)の入力
+        With Worksheets("Input")
+          .Range(.Cells(1, disksColumn), .Cells(i - 1, disksColumn)).Copy
+        End With
+        For Each Var In checkedElementsArray
+          Worksheets(Var).Cells(1, 2).PasteSpecial Transpose:=True
+        Next Var
+        'グラフの縦軸(時間の入力)
+        Do Until Worksheets("Input").Cells(j, timesColumn).Value = ""
+          j = j + 1
+        Loop
+        With Worksheets("Input")
+          .Range(.Cells(1, timesColumn), .Cells(j, timesColumn)).Copy
+        End With
+        For Each Var In checkedElementsArray
+          Worksheets(Var).Cells(2, 1).PasteSpecial (xlPasteAll)
+        Next Var
+        createHorizonAxis_Flag = 1
+        j = 1
+      End If
+      
+      '各シートに値を入力
+      For Each Var In checkedElementsArray
+        With Worksheets("Input")
+          .Range(.Cells(m, k), .Cells(i - 1, k)).Copy
+        End With
+        Worksheets(Var).Cells(l, 2).PasteSpecial Transpose:=True
+        k = k + 1
+      Next Var
+      k = 2
+      l = l + 1
+      m = i
+    End If
+  Loop
+  
+  makeGraph (checkedElementsArray)
+End Function

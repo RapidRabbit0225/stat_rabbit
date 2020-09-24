@@ -1,0 +1,49 @@
+'1次元配列に要素を追加
+Function addElementOneDimensionArray(myArray As Variant, element As String)
+  
+  Dim oldElementCount As Long
+  Dim newElementCount As Long
+  
+  oldElementCount = UBound(myArray)
+  
+  '要素数の追加
+  newElementCount = oldElementCount + 1
+  ReDim Preserve myArray(newElementCount)
+  myArray(newElementCount) = element
+  
+  addElementOneDimensionArray = myArray
+End Function
+
+'配列の分シートを作成
+Function addSheetsForArray(myArray)
+  For i = UBound(myArray) To LBound(myArray) Step -1
+    Call addWorksheets(myArray(i))
+  Next i
+  'For Each element In myArray
+  '  Call addWorksheets(element)
+  'Next element
+End Function
+
+'ワークシートの作成
+Function addWorksheets(sheetname As Variant)
+    Dim addedSheet As Worksheet
+    Set addedSheet = Worksheets.Add(Before:=Worksheets(1))
+    addedSheet.Name = sheetname
+End Function
+
+'グラフの作成
+Function makeGraph(myArray)
+  For Each Var In myArray
+    With Worksheets(Var).Shapes.AddChart.Chart
+      .ChartType = xlLine
+      .SetSourceData Worksheets(Var).Cells
+      
+      Select Case .PlotBy
+        Case xlRows
+          .PlotBy = xlColumns
+      Case xlColumns
+        .PlotBy = xlRows
+      End Select
+    End With
+  Next Var
+End Function
