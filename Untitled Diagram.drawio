@@ -1,1 +1,66 @@
-<mxfile host="app.diagrams.net" modified="2020-10-16T13:43:02.273Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="xyMVUmdkvLhA8SrgWwX4" version="13.8.0" type="github"><diagram id="mBbKXv8BrfVCkdiX2R5A" name="Page-1">jZI9b8MgEIZ/jcdItmncZo2bpkuWeIhXZC4GBYyFSY3z64sL+ENRpC6IezjujvclQrkwR4VbepIEeJTGxEToM0rT9+3OriMYHMji2IFaMeJQMoOCPcDDkHZnBLpVopaSa9auYSWbBiq9Ylgp2a/TrpKvu7a4hidQVJg/0wsjmjr6sY1n/g2spqFzEt4ncEj2oKOYyH6B0CFCuZJSu50wOfBRu6CLu/f14nQaTEGj/3PhPGTlw7DbJduUR1HubucTbJCr8oP53T/YD6uHoICtYsW2wb6nTEPR4mo86a3dllEtuI0Su8Vd6xy4MgO26d7XBqXBvBw6maSwXwikAK0Gm+IvpG9ePf99QtjPXgREFzYEhr379VR4FshuvEYhnL34O1t8aHT4BQ==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-10-16T14:11:30.755Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="LgfHuueG9SRpmgax_qWK" version="13.8.0" type="github">
+  <diagram id="mBbKXv8BrfVCkdiX2R5A" name="Page-1">
+    <mxGraphModel dx="625" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-20" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="225" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-21" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;" edge="1" parent="1" source="VBdhHwv4kqK2b3gtLmUC-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VBdhHwv4kqK2b3gtLmUC-23" target="VBdhHwv4kqK2b3gtLmUC-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VBdhHwv4kqK2b3gtLmUC-23" target="VBdhHwv4kqK2b3gtLmUC-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-23" value="ディスクを選択する&lt;br&gt;画面を表示" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="180" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-25" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="425" y="135" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-26" value="キャンセルボタン&lt;br&gt;押下" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="120" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VBdhHwv4kqK2b3gtLmUC-23" target="VBdhHwv4kqK2b3gtLmUC-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VBdhHwv4kqK2b3gtLmUC-40" target="VBdhHwv4kqK2b3gtLmUC-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VBdhHwv4kqK2b3gtLmUC-40" target="VBdhHwv4kqK2b3gtLmUC-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-40" value="&lt;span&gt;指標を選択する&lt;/span&gt;&lt;br&gt;&lt;span&gt;画面を表示&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#ff0000;fillColor=#ffffc0;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="180" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-42" value="次へボタン押下" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="190" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VBdhHwv4kqK2b3gtLmUC-43" target="VBdhHwv4kqK2b3gtLmUC-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-43" value="グラフ作成" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#ff0000;fillColor=#ffffc0;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="180" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-49" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="425" y="255" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-51" value="キャンセルボタン&lt;br&gt;押下" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="230" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-52" value="実行ボタン押下" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="330" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VBdhHwv4kqK2b3gtLmUC-53" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="225" y="500" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
